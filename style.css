@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #86868b;
+    font-family: 'Geologica', sans-serif;
+    transform: translate3d(0, 0, 0, 1);
+    /* HARDWARE ACCELERATION */
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    inline-size: 100%;
+    justify-content: center;
+    gap: 5%;
+    padding-block: 10px;
+    background-color: rgba(0, 0, 0, 0.427);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    z-index: 4;
+}
+
+img {
+    cursor: pointer;
+}
+
+nav p {
+    cursor: pointer;
+    transition: color 500ms cubic-bezier(.17, .67, .83, .67);
+}
+
+nav p:hover {
+    color: #fff;
+}
+
+section {
+    position: relative;
+    block-size: 100vh;
+    inline-size: 100vw;
+}
+
+#home {
+    display: grid;
+    place-content: center;
+    text-align: center;
+    gap: 3vh;
+    line-height: 1.4;
+}
+
+#home span {
+    color: #fff;
+    position: relative;
+    inline-size: max-content;
+    display: inline-block;
+}
+
+
+h2 {
+    font-size: 3rem;
+    font-size: clamp(3rem, 2.15rem + 4.25vw, 7.25rem);
+}
+
+h1 {
+    font-weight: lighter;
+    color: #fff;
+    animation: text 500ms ease-out forwards;
+}
+
+#home p {
+    animation: text 500ms ease-out forwards;
+}
+
+@keyframes text {
+    0% {
+        translate: 0 20px;
+        opacity: 0;
+    }
+
+    100% {
+        translate: 0 0;
+        opacity: 1;
+    }
+}
+
+nav svg {
+    display: none;
+}
+
+
+.odd {
+    transform: skew(5deg);
+}
+
+.even {
+    transform: skew(-5deg);
+}
+
+#home {
+    padding-block-start: 30vh;
+}
+
+@media screen and (orientation: portrait) and (width < 768px) {
+    nav {
+        justify-content: space-between;
+        padding-inline: 25px;
+    }
+
+    #home {
+        padding-block-start: 0;
+    }
+
+    nav p {
+        display: none;
+    }
+
+    nav svg {
+        display: block;
+    }
+
+}
+
+.phone-container {
+    position: relative;
+    block-size: max-content;
+    display: block;
+    inline-size: 100vw;
+    /* overflow: hidden; */
+    margin-block-start: 30px;
+}
+
+video {
+    position: absolute;
+    inline-size: 90vw;
+    max-inline-size: 990px;
+    inset-inline-start: 50%;
+    inset-block-start: 0;
+    translate: -50% 0;
+    object-fit: cover;
+    overflow: hidden;
+    padding-inline-start: 1px;
+    padding-block-start: 2px;
+    aspect-ratio: 775/370;
+}
+
+video {
+    border-radius: calc(3vw + 20px);
+}
+
+
+.phone-container img {
+    position: relative;
+    inline-size: 90vw;
+    max-inline-size: 990px;
+    z-index: 2;
+    margin-block-end: -6px;
+    margin-inline-start: -1px;
+    margin-inline-end: -1px;
+}
