@@ -134,6 +134,8 @@ nav svg {
     inline-size: 100vw;
     /* overflow: hidden; */
     margin-block-start: 30px;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 video {
@@ -150,10 +152,26 @@ video {
     aspect-ratio: 775/370;
 }
 
-
-video {
-    border-radius: calc(5vw + 13px);
+@media screen and (orientation:portrait) {
+    video {
+        border-radius: calc(10vw - 10px);
+    }
 }
+
+@media screen and (orientation:landscape) {
+    video {
+        border-radius: calc(5vw + 10px);
+    }
+}
+
+@media screen and (orientation:landscape) and (width > 1600px) {
+    video {
+        border-radius: 80px;
+    }
+}
+
+
+
 
 .filter {
     filter: blur(30px);
@@ -167,5 +185,5 @@ video {
     z-index: 2;
     margin-block-end: -6px;
     margin-inline-start: -1px;
-    margin-inline-end: -1px;
+    margin-inline-end: -2px;
 }
