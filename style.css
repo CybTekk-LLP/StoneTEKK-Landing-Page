@@ -129,8 +129,8 @@ nav svg {
 
 .phone-container {
     position: relative;
-    block-size: max-content;
     display: block;
+    block-size: max-content;
     inline-size: 100vw;
     /* overflow: hidden; */
     margin-block-start: 30px;
