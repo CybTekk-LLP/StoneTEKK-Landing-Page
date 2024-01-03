@@ -150,10 +150,15 @@ video {
     aspect-ratio: 775/370;
 }
 
+
 video {
-    border-radius: calc(3vw + 20px);
+    border-radius: calc(5vw + 13px);
 }
 
+.filter {
+    filter: blur(30px);
+    z-index: -1;
+}
 
 .phone-container img {
     position: relative;
