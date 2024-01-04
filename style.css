@@ -32,6 +32,10 @@ nav {
     z-index: 4;
 }
 
+a {
+    text-decoration: none;
+}
+
 img {
     cursor: pointer;
 }
