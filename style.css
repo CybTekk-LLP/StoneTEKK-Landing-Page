@@ -181,6 +181,7 @@ video {
 
 .phone-container img {
     position: relative;
+    image-rendering: optimizeSpeed;
     inline-size: 90vw;
     max-inline-size: 990px;
     z-index: 2;
