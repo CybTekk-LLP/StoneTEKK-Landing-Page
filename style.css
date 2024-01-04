@@ -38,6 +38,16 @@ a {
 
 img {
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+
+img::selection {
+    background-color: transparent;
+}
+
+::selection {
+    background-color: #6868681b;
 }
 
 :is(nav, .menu) p {
@@ -197,7 +207,6 @@ video {
 }
 
 .menu {
-
     position: fixed;
     inline-size: 100vw;
     block-size: 100vh;
@@ -207,17 +216,25 @@ video {
     inset-inline-start: 0;
     inset-block-start: 0;
     z-index: 5;
-    display: grid;
     place-items: center;
     text-align: center;
     padding-block-start: 10vh;
     padding-block-end: 30vh;
     overflow: hidden;
     display: none;
+    opacity: 0;
 }
 
 .menu p {
     font-size: 2rem;
     -webkit-tap-highlight-color: transparent;
     color: #aeaeb4;
+}
+
+.close {
+    position: absolute;
+    inset-inline-end: 0;
+    inset-block-start: 0;
+    display: block;
+    margin: 16px 28px;
 }
