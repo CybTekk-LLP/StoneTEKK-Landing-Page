@@ -6,7 +6,9 @@
     box-sizing: border-box;
 }
 
-
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     background-color: #000;
@@ -34,12 +36,12 @@ img {
     cursor: pointer;
 }
 
-nav p {
+:is(nav, .menu) p {
     cursor: pointer;
     transition: color 500ms cubic-bezier(.17, .67, .83, .67);
 }
 
-nav p:hover {
+:is(nav, .menu) p:hover {
     color: #fff;
 }
 
@@ -188,4 +190,30 @@ video {
     margin-block-end: -6px;
     margin-inline-start: -1px;
     margin-inline-end: -2px;
+}
+
+.menu {
+
+    position: fixed;
+    inline-size: 100vw;
+    block-size: 100vh;
+    background-color: #000000aa;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    inset-inline-start: 0;
+    inset-block-start: 0;
+    z-index: 5;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding-block-start: 10vh;
+    padding-block-end: 30vh;
+    overflow: hidden;
+    display: none;
+}
+
+.menu p {
+    font-size: 2rem;
+    -webkit-tap-highlight-color: transparent;
+    color: #aeaeb4;
 }
