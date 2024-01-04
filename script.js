@@ -1,3 +1,19 @@
+let preloader = document.getElementById("preloader");
+let preloaderWrapper = document.querySelector(".preloader-wrapper");
+preloader.setAttribute("src", "./assets/preloader.gif");
+setTimeout(() => {
+  preloader.remove();
+  preloaderWrapper.animate([{ opacity: 1 }, { opacity: 0 }], {
+    duration: 400,
+    iterations: 1,
+    fill: "both",
+    easing: "cubic-bezier(0.17, 0.67, 0.83, 0.67)",
+  });
+}, 2400);
+setTimeout(() => {
+  preloaderWrapper.remove();
+}, 2800);
+
 let video = document.querySelector("video");
 let clone = video.cloneNode(true);
 clone.classList.add("filter");
