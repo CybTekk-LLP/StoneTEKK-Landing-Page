@@ -47,7 +47,11 @@ img::selection {
 }
 
 ::selection {
-    background-color: #6868681b;
+    background-color: transparent;
+}
+
+:is(h1, h2, h3, h4, h5, p, span)::selection {
+    background-color: transparent;
 }
 
 :is(nav, .menu) p {
